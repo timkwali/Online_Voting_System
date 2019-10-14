@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>homepage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      body {
+        background-image: url("images/voting points.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #page {
+        display: flex;
+        height: 88%;
+      }
+
+      #nav {
+        width: 20%;
+        height: 100%;
+        border-right: 1px solid green;
+        background-color: rgba(235, 226, 226, 0.8);
+        display: flex;
+        flex-direction: column;
+      }
+
+      #content {
+        width: 85%;
+        height: 100%;
+      }
+
+      .signIn {
+        height: 75vh;;
+        width: 50%;
+        background-color: rgba(235, 226, 226, 0.8);
+        overflow: auto;
+      }
+
+      button {
+        margin-left: 35%;
+      }
+
+      #nav button {
+        width: 100%;
+        height: 80px;
+        margin-left: 0px;
+      }
+
+      #btns {
+        margin-top: 20%;
+      }
+
+      #candidates {
+        height: 63vh;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgba(235, 226, 226, 0.8);
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      h1 {
+        width: 100%;
+        height: 12%;
+      }
+
+      .names {
+        width: 35%;
+        height: 88%;
+        margin-top: -8px;
+        border-right: 1px solid green;
+        overflow: auto;
+      }
+
+      .info {
+        width: 65%;
+        height: 88%;
+        margin-top: -8px;
+        overflow: auto;
+      }
+
+      #deadline {
+        width: 50%;
+        height: 55%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgba(235, 226, 226, 0.8);
+      }
+
+      #winner {
+        width: 50%;
+        min-height: 55%;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: auto;
+        background-color: rgba(235, 226, 226, 0.8);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="body">
+      <div id="navigation">
+        <div class="logo">
+          <a title="Home" href="homepage.html"><img src="images/inec logo.png" height="20px" width="20px">INEC</a>
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a title="View Registerd Candidates" href="candidates.html">Candidates</a></li>
+            <li><a title="Register Voter" href="registerVoter.html">Register</a></li>
+            <li><a title="Voter Sign In" href="voterSignIn.html">Sign In</a></li> 
+          </ul>
+        </nav>
+      </div>
+
+      <div id="page">
+        <div id="nav">
+          <div id="btns">
+            <button>REGISTER CANDIDATE</button>
+            <button>UPDATE CANDIDATE</button>
+            <button>DELETE CANDIDATE</button>
+            <button>SET ELECTION DEADLINE</button>
+            <button>VIEW ELECTION WINNER</button>
+          </div>
+        </div>
+        <div id="content">
+          <div class="form">
+            <div class="signIn" style="display:none">
+              <div id="register candidate" >
+                <h1>REGISTER CANDIDATE</h1>
+                <form>
+                    <div class="form-group">
+                      <label for="firstName">first name</label>
+                      <input type="text" class="form-control" id="firstName" name="firstName">
+                    </div>
+                    <div class="form-group">
+                      <label for="lastName">last name</label>
+                      <input type="text" class="form-control" id="lastName" name="lastName">
+                    </div>
+                    <div class="form-group">
+                        <label for="age">age</label>
+                        <input type="number" class="form-control" id="age" name="age">
+                    </div>
+                    <div>
+                      <select class="browser-default custom-select" name="party">
+                        <option selected>political party</option>
+                        <option value="APC">APC</option>
+                        <option value="PDP">PDP</option>
+                      </select>
+                    </div><br>
+                    <div>
+                        <select class="browser-default custom-select" name="gender">
+                          <option selected>Gender</option>
+                          <option value="male">Male</option>
+                          <option value="female">Female</option>
+                        </select>
+                    </div><br>
+                    <label>Upload Image</label>
+                    <input type="file" class="form-control-file"><br>
+                    <button type="submit">Register Candidate</button>
+                  </form>
+              </div>
+            </div>
+          </div>
+          <div id="candidates" style="display: none">
+            <h1>CANDIDATES</h1>
+            <div class="names"></div>
+            <div class="info"></div>            
+          </div>
+          <div id="deadline"  style="display: none">
+            <h1>SET DEADLINE</h1>
+            <div></div>
+          </div>
+          <div id="winner">
+            <h1>ELECTION WINNER</h1>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/adminPage.js"></script>
+  </body>
+</html>

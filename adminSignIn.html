@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>homepage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      body {
+        background-image: url("images/voting points.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #signIn {
+        height: auto;
+        width: 30%;
+        background-color: rgba(235, 226, 226, 0.8);
+      }
+
+      button {
+        margin-left: 40%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="body">
+      <div id="navigation">
+        <div class="logo">
+          <a title="Home" href="homepage.html"><img src="images/inec logo.png" height="20px" width="20px">INEC</a>
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a title="View Registerd Candidates" href="candidates.html">Candidates</a></li>
+            <li><a title="Register Voter" href="registerVoter.html">Register</a></li>
+            <li><a title="Voter Sign In" href="voterSignIn.html">Sign In</a></li> 
+          </ul>
+        </nav>
+      </div>
+      <div class="form">
+        <form id="signIn">
+            <h1>ADMIN SIGN IN</h1>
+            <div class="form-group">
+                <label for="adminNumber">admin number</label>
+                <input type="text" class="form-control" id="adminNumber" name="adminNumber">
+            </div>
+            <div class="form-group">
+              <label for="password">password</label>
+              <input type="password" class="form-control" id="password" name="password">
+            </div>
+        
+            <button type="submit">Sign In</button>
+            <p id="display"></p>
+          
+          </form>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+      
+    </script>
+  </body>
+</html>
