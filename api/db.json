@@ -1,0 +1,35 @@
+{
+  "administrators": [
+    {
+      "firstName": "John",
+      "lastName": "Doe",
+      "adminNumber": "12345",
+      "password": "12345"
+    }
+  ],
+  "candidates": [
+    {
+      "firstName": "MUHAMADU",
+      "lastName": "BUHARI",
+      "age": "75",
+      "party": "APC",
+      "gender": "MALE",
+      "candidateImage": "C:\\fakepath\\buhari.jpeg",
+      "partyImage": "C:\\fakepath\\apcLogo.jpg",
+      "votes": "0",
+      "id": 1
+    },
+    {
+      "firstName": "ATIKU",
+      "lastName": "ABUBAKAR",
+      "age": "65",
+      "party": "PDP",
+      "gender": "MALE",
+      "candidateImage": "C:\\fakepath\\atiku.jpg",
+      "partyImage": "C:\\fakepath\\pdpLogo.png",
+      "votes": "0",
+      "id": 2
+    }
+  ],
+  "voters": []
+}

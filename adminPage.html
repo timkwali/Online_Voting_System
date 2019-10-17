@@ -39,7 +39,6 @@
         height: 75vh;;
         width: 50%;
         background-color: rgba(235, 226, 226, 0.8);
-        overflow: auto;
       }
 
       button {
@@ -52,8 +51,15 @@
         margin-left: 0px;
       }
 
-      #btns {
-        margin-top: 20%;
+      .admin {
+        width: 100%;
+        height: 15%;
+        margin-left: 0px;
+        background: rgba(21, 214, 0);
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 7%;
       }
 
       #candidates {
@@ -66,24 +72,92 @@
         flex-wrap: wrap;
       }
 
+      form {
+        height: 66vh;
+        overflow: auto;
+      }
+
       h1 {
         width: 100%;
-        height: 12%;
+        height: auto;
       }
+
 
       .names {
         width: 35%;
         height: 88%;
         margin-top: -8px;
-        border-right: 1px solid green;
+        border-right: 3px solid rgba(21, 214, 0);
         overflow: auto;
+        display: flex;
+        flex-direction: column;
       }
 
       .info {
         width: 65%;
         height: 88%;
         margin-top: -8px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      #top {
+        width: 100%;
+        height: 40%;
+        display: flex;
+      }
+
+      #pictures {
+        width: 75%;
+        height: 100%;
+        display: flex;
+      }
+
+      #candPic {
+        height: 100%;
+        width: 60%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #partyPic {
+        height: 100%;
+        width: 40%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #updDel {
+        width: 25%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      #updDel button {
+        margin-left: 0px;
+        height: 50%;
+        
+      }
+
+      #updDel button:nth-child(2):hover {
+        margin-left: 0px;
+        height: 50%;
+        font-weight: bold;
+        background: red;
+      }
+
+      #bottom {
+        width: 100%;
+        height: 60%;
+        padding-top: 2%;
+        padding-left: 2%;
+        font-weight: bold;
         overflow: auto;
+      }
+
+      .inf {
+        color: rgba(21, 214, 0);
       }
 
       #deadline {
@@ -101,6 +175,13 @@
         margin-right: auto;
         overflow: auto;
         background-color: rgba(235, 226, 226, 0.8);
+      }
+
+      .candidateButton {
+        width: 100%;
+        height: 50px;
+        margin-left: 0;
+        font-weight: bold;
       }
     </style>
   </head>
@@ -122,17 +203,17 @@
       <div id="page">
         <div id="nav">
           <div id="btns">
-            <button>REGISTER CANDIDATE</button>
-            <button>UPDATE CANDIDATE</button>
-            <button>DELETE CANDIDATE</button>
-            <button>SET ELECTION DEADLINE</button>
-            <button>VIEW ELECTION WINNER</button>
+            <div class="admin">ADMIN: </div>
+            <button id="regCand">REGISTER CANDIDATE</button>
+            <button id="upCand">CANDIDATES</button>
+            <button id="setDead">SET ELECTION DEADLINE</button>
+            <button id="viewWin">VIEW ELECTION WINNER</button>
           </div>
         </div>
         <div id="content">
           <div class="form">
-            <div class="signIn" style="display:none">
-              <div id="register candidate" >
+            <div class="signIn">
+              <div id="registerCandidate" >
                 <h1>REGISTER CANDIDATE</h1>
                 <form>
                     <div class="form-group">
@@ -148,32 +229,44 @@
                         <input type="number" class="form-control" id="age" name="age">
                     </div>
                     <div>
-                      <select class="browser-default custom-select" name="party">
+                      <select class="browser-default custom-select" id="party">
                         <option selected>political party</option>
                         <option value="APC">APC</option>
                         <option value="PDP">PDP</option>
                       </select>
                     </div><br>
                     <div>
-                        <select class="browser-default custom-select" name="gender">
+                        <select class="browser-default custom-select" id="gender">
                           <option selected>Gender</option>
-                          <option value="male">Male</option>
-                          <option value="female">Female</option>
+                          <option value="MALE">MALE</option>
+                          <option value="FEMALE">FEMALE</option>
                         </select>
                     </div><br>
-                    <label>Upload Image</label>
-                    <input type="file" class="form-control-file"><br>
-                    <button type="submit">Register Candidate</button>
+                    <label>Upload Candidate Image</label>
+                    <input id="candidateImage" type="file" class="form-control-file"><br>
+                    <label>Upload Party Image</label>
+                    <input id="partyImage" type="file" class="form-control-file"><br>
+                    <button type="submit" id="submitCandidate">Register Candidate</button>
+                    <p></p>
                   </form>
               </div>
             </div>
           </div>
-          <div id="candidates" style="display: none">
+          <div id="candidates">
             <h1>CANDIDATES</h1>
             <div class="names"></div>
-            <div class="info"></div>            
+            <div class="info">
+              <div id="top">
+                <div id="pictures">
+                  <div id="candPic"></div>
+                  <div id="partyPic"></div>
+                </div>
+                <div id="updDel"></div>
+              </div>
+              <div id="bottom"></div>
+            </div>            
           </div>
-          <div id="deadline"  style="display: none">
+          <div id="deadline">
             <h1>SET DEADLINE</h1>
             <div></div>
           </div>

@@ -62,7 +62,40 @@
 
     <script src="js/jquery-3.4.1.js"></script>
     <script>
-      
+      $(document).ready(function() {
+        $("button").click(function() {
+          $.ajax({
+            type: "GET",
+            url: "http://localhost:3000/administrators",
+            success: function(admins) {
+              const adm = $("#adminNumber").val();
+              const pass = $("#password").val();
+              signIn(admins, adm, pass);
+            },
+            error: function() {
+              alert("Something went wrong");
+            }
+          })
+        })
+
+        const signIn = (admins, adm, pass) => {
+          event.preventDefault();
+          //compare admin info
+          admins.forEach(admin => {
+            const adminNum = admin["adminNumber"] === adm;
+            const paswrd = admin["password"] ===  pass;
+            if(adminNum) {
+              if(paswrd) {
+                alert(`Welcome Administrator, ${admin["firstName"]} ${admin["lastName"]}`);
+                window.location.href = "adminPage.html"
+              } else {
+                alert(`admin number or password not correct`)
+              }
+            }
+
+          });
+        }
+      })
     </script>
   </body>
 </html>
