@@ -173,8 +173,15 @@
         min-height: 55%;
         margin-left: auto;
         margin-right: auto;
-        overflow: auto;
         background-color: rgba(235, 226, 226, 0.8);
+      }
+
+      #results {
+        color: rgba(21, 214, 0);
+        padding-top: 2%;
+        padding-left: 2%;
+        font-weight: bold;
+        overflow: auto;
       }
 
       .candidateButton {
@@ -183,6 +190,9 @@
         margin-left: 0;
         font-weight: bold;
       }
+
+      
+
     </style>
   </head>
   <body>
@@ -207,12 +217,12 @@
             <button id="regCand">REGISTER CANDIDATE</button>
             <button id="upCand">CANDIDATES</button>
             <button id="setDead">SET ELECTION DEADLINE</button>
-            <button id="viewWin">VIEW ELECTION WINNER</button>
+            <button id="viewWin">VIEW ELECTION RESULT</button>
           </div>
         </div>
         <div id="content">
           <div class="form">
-            <div class="signIn">
+            <div class="signIn" id="regCandidate">
               <div id="registerCandidate" >
                 <h1>REGISTER CANDIDATE</h1>
                 <form>
@@ -229,15 +239,15 @@
                         <input type="number" class="form-control" id="age" name="age">
                     </div>
                     <div>
+                      <label for="party">party</label>
                       <select class="browser-default custom-select" id="party">
-                        <option selected>political party</option>
                         <option value="APC">APC</option>
                         <option value="PDP">PDP</option>
                       </select>
                     </div><br>
                     <div>
+                        <label for="gender">gender</label>
                         <select class="browser-default custom-select" id="gender">
-                          <option selected>Gender</option>
                           <option value="MALE">MALE</option>
                           <option value="FEMALE">FEMALE</option>
                         </select>
@@ -271,8 +281,49 @@
             <div></div>
           </div>
           <div id="winner">
-            <h1>ELECTION WINNER</h1>
-            <div></div>
+            <h1>ELECTION RESULT</h1>
+            <div id="results" class="inf"></div>
+          </div>
+          <div class="form" id="updCandidate">
+            <div class="signIn" >
+              <div id="updateCandidate">
+                <h1>UPDATE CANDIDATE</h1>
+                <form>
+                    <div class="form-group">
+                      <label for="updateFirstName">first name</label>
+                      <input type="text" class="form-control" id="updateFirstName" name="updateFirstName">
+                    </div>
+                    <div class="form-group">
+                      <label for="updateLastName">last name</label>
+                      <input type="text" class="form-control" id="updateLastName" name="updateLastName">
+                    </div>
+                    <div class="form-group">
+                        <label for="updateAge">age</label>
+                        <input type="number" class="form-control" id="updateAge" name="updateAge">
+                    </div>
+                    <div>
+                      <label for="updateParty">party</label>
+                      <select class="browser-default custom-select" id="updateParty">
+                        <option value="APC">APC</option>
+                        <option value="PDP">PDP</option>
+                      </select>
+                    </div><br>
+                    <div>
+                        <label for="updateGender">gender</label>
+                        <select class="browser-default custom-select" id="updateGender">
+                          <option value="MALE">MALE</option>
+                          <option value="FEMALE">FEMALE</option>
+                        </select>
+                    </div><br>
+                    <label>Update Candidate Image</label>
+                    <input id="updateCandidateImage" type="file" class="form-control-file"><br>
+                    <label>Update Party Image</label>
+                    <input id="updatePartyImage" type="file" class="form-control-file"><br>
+                    <button type="submit" id="updateCandidateButton">Update Candidate</button>
+                    <p></p>
+                  </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
