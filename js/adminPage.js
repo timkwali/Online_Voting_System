@@ -219,16 +219,26 @@ $(document).ready(function() {
           }
         })
         //display election results
-        let p = $("<p/>", {"class": "inf"});
+        $("#results").text("");
         candidates.forEach(candidate => {
-          $("#results").text("");
-          $("#results").append(p.text(`${candidate["firstName"]} ${candidate["lastName"]}: ${candidate["votes"]} VOTES`));
+          if(parseInt(candidate["votes"]) === mostVotes) {
+            let p = $("<p/>").css("color", "red");
+            $("#results").append(p.text(`${candidate["firstName"]} ${candidate["lastName"]}: ${candidate["votes"]} VOTES`).clone());
+          } else {
+            let p = $("<p/>").css("color", `rgb(21, 214, 0)`);
+            $("#results").append(p.text(`${candidate["firstName"]} ${candidate["lastName"]}: ${candidate["votes"]} VOTES`).clone());
+          }
         })
-
-
         //declare winner(s) of the election
         if(winner.length === 1) {
           alert(`The winner of the election is ${winner[0]}`)
+        } else {
+          let message = "The election is a draw between "
+          winner.forEach(win => {
+            message += win + " and ";
+          })
+          message = message.slice(0, -4);
+          alert(message)
         }
       },
       error: function() {

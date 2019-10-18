@@ -28,13 +28,17 @@
 
       .signIn {
         height: 75vh;;
-        width: 50%;
+        width: 70%;
         background-color: rgba(235, 226, 226, 0.8);
         overflow: auto;
       }
 
       button {
         margin-left: 35%;
+      }
+
+      .form {
+        margin-left: 25%;
       }
     </style>
   </head>
@@ -76,15 +80,16 @@
                         <input type="password" class="form-control" id="password" name="password">
                       </div>
                       <div>
-                          <select class="browser-default custom-select" name="gender">
-                            <option selected>Gender</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
+                          <label for="gender">gender</label>
+                          <select class="browser-default custom-select" id="gender" name="gender">
+                            <option value="MALE">MALE</option>
+                            <option value="FEMALE">FEMALE</option>
                           </select>
                       </div><br>
-                      <label>Upload Image</label>
-                      <input type="file" class="form-control-file"><br>
+                      <label for="image">Upload Image</label>
+                      <input type="file" class="form-control-file" id="image"><br>
                       <button type="submit">Register Voter</button>
+                      <p></p>
                     </form>
                 </div>
               </div>
@@ -94,6 +99,37 @@
     </div>
 
     <script src="js/jquery-3.4.1.js"></script>
-    <script src="js/homepage.js"></script>
+    <script>
+      $("button").click(function() {
+        event.preventDefault();
+        if(  parseInt($("#age").val()) < 18 ) {
+          alert("Voter must be 18 years and above to register");
+        } else {
+          const regNumber = Math.floor(Math.random() * 90000) + 10000;
+          let voter = {
+            "firstName": $("#firstName").val().toUpperCase(),
+            "lastName": $("#lastName").val().toUpperCase(),
+            "age": $("#age").val(),
+            "password": $("#password").val(),
+            "registrationNumber": regNumber,
+            "gender": $("#gender").val(),
+            "image": $("#image").val(),
+            "hasVoted": "NO"
+          }
+          $.ajax({
+            type: "POST",
+            url: `http://localhost:3000/voters`,
+            data: voter,
+            success: function() {
+              alert(`Voter ${voter["firstName"]} ${voter["lastName"]} successfully registered.\nRegistration Number: ${voter["registrationNumber"]}\npassword: ${voter["password"]}`);
+              window.location.href = "homepage.html";
+            },
+            error: function() {
+              alert("Something went wrong")
+            }
+          })
+        }
+      })
+    </script>
   </body>
 </html>

@@ -16,7 +16,7 @@
       "gender": "MALE",
       "candidateImage": "C:\\fakepath\\buhari.jpeg",
       "partyImage": "C:\\fakepath\\apcLogo.jpg",
-      "votes": "56",
+      "votes": "5",
       "id": 1
     },
     {
@@ -31,5 +31,7 @@
       "id": 2
     }
   ],
-  "voters": []
+  "voters": [
+    
+  ]
 }
