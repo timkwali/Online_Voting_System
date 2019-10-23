@@ -32,6 +32,52 @@
     }
   ],
   "voters": [
-    
+    {
+      "firstName": "TIMRING",
+      "lastName": "TIMKWALI",
+      "age": "98",
+      "password": "55555",
+      "registrationNumber": "82040",
+      "gender": "MALE",
+      "image": "C:\\fakepath\\pUnit2.jpg",
+      "hasVoted": "NO",
+      "id": 1
+    },
+    {
+      "firstName": "ESTHER",
+      "lastName": "ABUBAKAR",
+      "age": "65",
+      "password": "12345",
+      "registrationNumber": "43682",
+      "gender": "FEMALE",
+      "image": "",
+      "hasVoted": "NO",
+      "id": 2
+    },
+    {
+      "firstName": "JOHN",
+      "lastName": "TIMOTHY",
+      "age": "100",
+      "password": "12345",
+      "registrationNumber": "69479",
+      "gender": "MALE",
+      "image": "",
+      "hasVoted": "NO",
+      "id": 3
+    }
+  ],
+  "temp": [
+    {
+      "firstName": "ESTHER",
+      "lastName": "ABUBAKAR",
+      "age": "65",
+      "password": "12345",
+      "registrationNumber": "43682",
+      "gender": "FEMALE",
+      "image": "",
+      "hasVoted": "NO",
+      "id": "1",
+      "identity": "2"
+    }
   ]
 }

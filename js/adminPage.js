@@ -231,14 +231,18 @@ $(document).ready(function() {
         })
         //declare winner(s) of the election
         if(winner.length === 1) {
-          alert(`The winner of the election is ${winner[0]}`)
+          setTimeout(function() {
+            alert(`The winner of the election is ${winner[0]}`)
+          }, 100)
         } else {
           let message = "The election is a draw between "
           winner.forEach(win => {
             message += win + " and ";
           })
           message = message.slice(0, -4);
-          alert(message)
+          setTimeout(function() {
+            alert(message)
+          }, 100)
         }
       },
       error: function() {

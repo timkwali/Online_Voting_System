@@ -16,8 +16,12 @@
         background-size: cover;
       }
 
+      #body {
+        height: 88%;
+      }
+
       #candidates {
-        height: 63vh;
+        height: 70%;
         width: 50%;
         margin-top: 3%;
         margin-left: auto;
@@ -38,17 +42,36 @@
         margin-top: -8px;
         border-right: 1px solid green;
         overflow: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #picture {
+        border: 1px solid red;
+        height: 50%;
+        width: 100%;
       }
 
       .info {
-        width: 65%;
+        width: 60%;
         height: 88%;
         margin-top: -8px;
         overflow: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #details {
+        min-height: 50%;
+        width: 100%;
+        color: rgb(21, 214, 0);
+        font-weight: bold;
       }
     </style>
   </head>
-  <body>
+  <body id="voterHome">
     <div id="body">
       <div id="navigation">
         <div class="logo">
@@ -64,12 +87,17 @@
       </div>
       <div id="candidates">
           <h1>VOTER PROFILE</h1>
-          <div class="names"></div>
-          <div class="info"></div>            
+          <div class="names">
+            <div id="picture"></div>
+          </div>
+          <div class="info">
+            <div id="details"></div>
+          </div>            
       </div>
     </div>
 
     <script src="js/jquery-3.4.1.js"></script>
-    <script src="js/homepage.js"></script>
+    <script src="js/voterSignIn.js"></script>
+    <script src="js/voterHomepage.js"></script>
   </body>
 </html>
