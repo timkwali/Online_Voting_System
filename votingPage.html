@@ -34,9 +34,65 @@
 
       .names {
         width: 100%;
-        height: 75%;
+        min-height: 50%;
+        max-height: 100%;
         margin-top: -8px;
         overflow: auto;
+      }
+
+      form {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .box {
+        height: 50px;
+        width: 80%;
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        border-bottom: 1px solid rgb(21, 214, 0);
+      }
+      .box:nth-last-child(1) {
+        border-bottom: none;
+      }
+
+      .input {
+        height: 40px;
+        width: 15%;
+      }
+
+      .name {
+        height: 50px;
+        width: 70%;
+        margin-left: auto;
+        color: green;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .party {
+        height: 50px;
+        width: 15%;
+        font-size: 20px;
+        color: green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      button {
+        width: 80px;
+        height: 40px;
+        margin-top: 10px;
+        margin-left: 43%;
+      }
+
+      #cand {
+        display: flex;
+        flex-wrap: wrap;
       }
     </style>
   </head>
@@ -56,7 +112,12 @@
       </div>
       <div id="candidates">
           <h1>VOTE YOUR PREFERRED CANDIDATE</h1>
-          <div class="names"></div>            
+          <div class="names">
+            <form id="cand">
+
+            </form>
+            <button>VOTE</button>
+          </div>            
       </div>
     </div>
 

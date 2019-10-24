@@ -16,7 +16,7 @@
       "gender": "MALE",
       "candidateImage": "C:\\fakepath\\buhari.jpeg",
       "partyImage": "C:\\fakepath\\apcLogo.jpg",
-      "votes": "5",
+      "votes": "0",
       "id": 1
     },
     {
@@ -27,7 +27,7 @@
       "gender": "MALE",
       "candidateImage": "C:\\fakepath\\atiku.jpg",
       "partyImage": "C:\\fakepath\\pdpLogo.png",
-      "votes": "56",
+      "votes": "1",
       "id": 2
     }
   ],
@@ -51,7 +51,7 @@
       "registrationNumber": "43682",
       "gender": "FEMALE",
       "image": "",
-      "hasVoted": "NO",
+      "hasVoted": "YES",
       "id": 2
     },
     {
@@ -75,7 +75,7 @@
       "registrationNumber": "43682",
       "gender": "FEMALE",
       "image": "",
-      "hasVoted": "NO",
+      "hasVoted": "YES",
       "id": "1",
       "identity": "2"
     }
