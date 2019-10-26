@@ -25,6 +25,10 @@
       button {
         margin-left: 40%;
       }
+
+      .inf {
+        color: red;
+      }
     </style>
   </head>
   <body>
@@ -35,6 +39,9 @@
         </div>
         <nav>
           <ul class="nav-links">
+            <li id="electionDeadline1" class="inf"></li>
+            <li id="electionDeadline2" class="inf"></li>
+            <li id="electionDeadline3" class="inf"></li>
             <li><a title="View Registerd Candidates" href="candidates.html">Candidates</a></li>
             <li><a title="Register Voter" href="registerVoter.html">Register</a></li>
             <li><a title="Voter Sign In" href="voterSignIn.html">Sign In</a></li> 
@@ -61,41 +68,7 @@
     </div>
 
     <script src="js/jquery-3.4.1.js"></script>
-    <script>
-      $(document).ready(function() {
-        $("button").click(function() {
-          $.ajax({
-            type: "GET",
-            url: "http://localhost:3000/administrators",
-            success: function(admins) {
-              const adm = $("#adminNumber").val();
-              const pass = $("#password").val();
-              signIn(admins, adm, pass);
-            },
-            error: function() {
-              alert("Something went wrong");
-            }
-          })
-        })
-
-        const signIn = (admins, adm, pass) => {
-          event.preventDefault();
-          //compare admin info
-          admins.forEach(admin => {
-            const adminNum = admin["adminNumber"] === adm;
-            const paswrd = admin["password"] ===  pass;
-            if(adminNum) {
-              if(paswrd) {
-                alert(`Welcome Administrator, ${admin["firstName"]} ${admin["lastName"]}`);
-                window.location.href = "adminPage.html"
-              } else {
-                alert(`admin number or password not correct`)
-              }
-            }
-
-          });
-        }
-      })
-    </script>
+    <script src="js/adminSignIn.js"></script>
+    <script src="js/deadline.js"></script>
   </body>
 </html>

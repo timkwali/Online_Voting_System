@@ -40,7 +40,7 @@
         width: 40%;
         height: 88%;
         margin-top: -8px;
-        border-right: 1px solid green;
+        border-right: 3px solid rgb(21, 214, 0);
         overflow: auto;
         display: flex;
         justify-content: center;
@@ -48,9 +48,9 @@
       }
 
       #picture {
-        border: 1px solid red;
         height: 50%;
         width: 100%;
+        background-size: cover;
       }
 
       .info {
@@ -69,6 +69,10 @@
         color: rgb(21, 214, 0);
         font-weight: bold;
       }
+
+      p, .inf {
+        color: red;
+      }
     </style>
   </head>
   <body id="voterHome">
@@ -79,6 +83,9 @@
         </div>
         <nav>
           <ul class="nav-links">
+            <li id="electionDeadline1" class="inf"></li>
+            <li id="electionDeadline2" class="inf"></li>
+            <li id="electionDeadline3" class="inf"></li>
             <li><a title="View Registerd Candidates" href="candidates.html">Candidates</a></li>
             <li><a title="Register Voter" href="registerVoter.html">Register</a></li>
             <li><a title="Voter Sign In" href="voterSignIn.html">Sign In</a></li> 
@@ -99,5 +106,6 @@
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/voterSignIn.js"></script>
     <script src="js/voterHomepage.js"></script>
+    <script src="js/deadline.js"></script>
   </body>
 </html>

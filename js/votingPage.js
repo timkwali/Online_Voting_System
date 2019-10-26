@@ -125,3 +125,7 @@ const updateCandidateData = () => {
 }
 
 $("body").on("load", getCandidates());
+
+$(document).ready(function() {
+  $("body").on("load", showElectionDeadline());
+})

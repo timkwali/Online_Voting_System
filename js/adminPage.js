@@ -95,7 +95,6 @@ $(document).ready(function() {
         })
       })
     })
-
   }
 
   const deleteCandidate = (candidates, button) => {
@@ -179,7 +178,7 @@ $(document).ready(function() {
       })
     }
   }
-
+  
   const resetformValues = () => {
     $("#updateFirstName").val("");
     $("#updateLastName").val("");
@@ -251,6 +250,42 @@ $(document).ready(function() {
     })
   }
 
+  const getAdminData = () => {
+    $.ajax({
+      type: "GET",
+      url: "http://localhost:3000/temp2/1",
+      success: function(admin) {
+        $(".admin").text(`ADMIN: ${admin["firstName"]} ${admin["lastName"]}`);
+        setTimeout(function() {
+          alert(`Welcome Administrator, ${admin["firstName"]} ${admin["lastName"]}`);
+        }, 100)
+      },
+      error: function() {
+        alert("error getting admin data")
+      }
+    })
+  }
+
+  const setElectionDeadline = () => {
+    event.preventDefault();
+    let deadline = {
+      "date": $("#date").val(),
+      "time": $("#time").val(),
+      "reached": "NO",
+    }
+    $.ajax({
+      type: "PUT",
+      url: "http://localhost:3000/deadline/1",
+      data: deadline,
+      success: function() {
+        showElectionDeadline();
+      }, 
+      error: function() {
+        alert("error sending deadline data")
+      }
+    })
+  }
+
   //show/hide different windows
   const showRegCand = () => {
     $("#updCandidate").hide();
@@ -286,6 +321,9 @@ $(document).ready(function() {
   $("#submitCandidate").click(function() {
     registerCandidate();
   });
+  $("#setDeadline").click(function() {
+    setElectionDeadline();
+  })
  
   //toggle sidebar buttons
   $("#regCand").click(function() {
@@ -304,5 +342,9 @@ $(document).ready(function() {
     showViewWin();
     checkElectionResult();
   })
+
+ 
   $("body").on("load", showRegCand());
+  $("body").on("load", getAdminData());
+  $("body").on("load", showElectionDeadline());
 })

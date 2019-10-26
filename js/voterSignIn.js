@@ -25,8 +25,7 @@ const sendVoter = (voter) => {
     error: function() {
       alert("Something went wrong")
     }
-  })
-  
+  }) 
 }
 
 $("button").click(function() {
@@ -45,3 +44,6 @@ $("button").click(function() {
 })
 
 $("body").on("load", getVoters());
+$(document).ready(function() {
+  $("body").on("load", showElectionDeadline() )
+})

@@ -16,23 +16,24 @@
         color: red;
       }
 
-      .declareWinner {
-        color: green;
-        font-weight: bold;
-        text-align: center;
+      #electionResults {
+        height: 50%;
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+        margin-bottom:10%;
+        background-color: rgba(226, 235, 231, 0.8);
       }
-
-      #electionWinner {
-        color: green;
-        height: auto;
+      h1 {
         width: 100%;
-        background: white;
+        height: auto;
       }
 
-      p a {
-        color: green;
+      #results {
+        font-size: 20px;
         font-weight: bold;
-        text-align: center;
+        overflow: auto;
       }
     </style>
   </head>
@@ -53,18 +54,14 @@
           </ul>
         </nav>
       </div>
-      <p id="electionWinner" class="declareWinner"></p>
-      <div id="welcome">
-        <p id="inec"><img src="images/inec2.gif" width="50%"></p>
-        <div id="message">
-          <p id="m1">WELCOME TO THE INDEPEDENT NATIONAL ELECTORAL COMMISSION</p>
-          <span id="e-voting">ELECTRONIC VOTING SYSTEM</span>
-        </div>
+      <div id="electionResults">
+        <h1>ELECTION RESULTS</h1>
+        <div id="results"></div>
       </div>
-      <button id="admin">Admin Log In</button>
     </div>
 
     <script src="js/jquery-3.4.1.js"></script>
-    <script src="js/homepage.js"></script>
+    <script src="js/electionResults.js"></script>
+    <script src="js/deadline.js"></script>
 </body>
 </html>

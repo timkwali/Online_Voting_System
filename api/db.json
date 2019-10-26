@@ -1,10 +1,16 @@
 {
   "administrators": [
     {
-      "firstName": "John",
-      "lastName": "Doe",
+      "firstName": "JOHN",
+      "lastName": "DOE",
       "adminNumber": "12345",
       "password": "12345"
+    },
+    {
+      "firstName": "ABIGAIL",
+      "lastName": "DAVID",
+      "adminNumber": "54321",
+      "password": "54321"
     }
   ],
   "candidates": [
@@ -27,43 +33,43 @@
       "gender": "MALE",
       "candidateImage": "C:\\fakepath\\atiku.jpg",
       "partyImage": "C:\\fakepath\\pdpLogo.png",
-      "votes": "1",
+      "votes": "0",
       "id": 2
+    },
+    {
+      "firstName": "OBY",
+      "lastName": "EZEKWESILI",
+      "age": "55",
+      "party": "APGA",
+      "gender": "FEMALE",
+      "candidateImage": "C:\\fakepath\\oby.jpeg",
+      "partyImage": "C:\\fakepath\\apgaLogo.png",
+      "votes": "0",
+      "id": 3
     }
   ],
   "voters": [
     {
-      "firstName": "TIMRING",
-      "lastName": "TIMKWALI",
-      "age": "98",
-      "password": "55555",
-      "registrationNumber": "82040",
+      "firstName": "THOMAS",
+      "lastName": "JESSE",
+      "age": "25",
+      "password": "12345",
+      "registrationNumber": "86128",
       "gender": "MALE",
-      "image": "C:\\fakepath\\pUnit2.jpg",
+      "image": "C:\\fakepath\\voter1.jpg",
       "hasVoted": "NO",
       "id": 1
     },
     {
       "firstName": "ESTHER",
-      "lastName": "ABUBAKAR",
-      "age": "65",
+      "lastName": "ANTHONY",
+      "age": "20",
       "password": "12345",
-      "registrationNumber": "43682",
+      "registrationNumber": "24951",
       "gender": "FEMALE",
-      "image": "",
-      "hasVoted": "YES",
-      "id": 2
-    },
-    {
-      "firstName": "JOHN",
-      "lastName": "TIMOTHY",
-      "age": "100",
-      "password": "12345",
-      "registrationNumber": "69479",
-      "gender": "MALE",
-      "image": "",
+      "image": "C:\\fakepath\\voter2.jpg",
       "hasVoted": "NO",
-      "id": 3
+      "id": 2
     }
   ],
   "temp": [
@@ -72,12 +78,29 @@
       "lastName": "ABUBAKAR",
       "age": "65",
       "password": "12345",
-      "registrationNumber": "43682",
+      "registrationNumber": "24951",
       "gender": "FEMALE",
-      "image": "",
-      "hasVoted": "YES",
+      "image": "C:\\fakepath\\voter2.jpg",
+      "hasVoted": "NO",
       "id": "1",
       "identity": "2"
+    }
+  ],
+  "temp2": [
+    {
+      "firstName": "JOHN",
+      "lastName": "DOE",
+      "adminNumber": "12345",
+      "password": "12345",
+      "id": 1
+    }
+  ],
+  "deadline": [
+    {
+      "date": "2019-10-26",
+      "time": "12:00",
+      "reached": "NO",
+      "id": 1
     }
   ]
 }
