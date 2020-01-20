@@ -40,7 +40,6 @@
       .form {
         margin-left: 25%;
       }
-
       .inf {
         color: red;
       }
@@ -50,7 +49,7 @@
     <div id="body">
       <div id="navigation">
         <div class="logo">
-          <a title="Home" href="homepage.html"><img src="images/inec logo.png" height="20px" width="20px">INEC</a>
+          <a title="Home" href="index.html"><img src="images/inec logo.png" height="20px" width="20px">INEC</a>
         </div>
         <nav>
           <ul class="nav-links">
@@ -129,7 +128,7 @@
             data: voter,
             success: function() {
               alert(`Voter ${voter["firstName"]} ${voter["lastName"]} successfully registered.\nRegistration Number: ${voter["registrationNumber"]}\npassword: ${voter["password"]}`);
-              window.location.href = "homepage.html";
+              window.location.href = "index.html";
             },
             error: function() {
               alert("Something went wrong")

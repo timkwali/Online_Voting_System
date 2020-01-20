@@ -22,7 +22,7 @@
       "gender": "MALE",
       "candidateImage": "C:\\fakepath\\buhari.jpeg",
       "partyImage": "C:\\fakepath\\apcLogo.jpg",
-      "votes": "0",
+      "votes": "1",
       "id": 1
     },
     {
@@ -37,9 +37,9 @@
       "id": 2
     },
     {
-      "firstName": "OBY",
-      "lastName": "EZEKWESILI",
-      "age": "55",
+      "firstName": "SOBY",
+      "lastName": "ADAMU",
+      "age": "75",
       "party": "APGA",
       "gender": "FEMALE",
       "candidateImage": "C:\\fakepath\\oby.jpeg",
@@ -57,33 +57,44 @@
       "registrationNumber": "86128",
       "gender": "MALE",
       "image": "C:\\fakepath\\voter1.jpg",
-      "hasVoted": "NO",
+      "hasVoted": "YES",
       "id": 1
     },
-    {
-      "firstName": "ESTHER",
-      "lastName": "ANTHONY",
-      "age": "20",
-      "password": "12345",
-      "registrationNumber": "24951",
-      "gender": "FEMALE",
-      "image": "C:\\fakepath\\voter2.jpg",
-      "hasVoted": "NO",
-      "id": 2
-    }
-  ],
-  "temp": [
     {
       "firstName": "ESTHER",
       "lastName": "ABUBAKAR",
       "age": "65",
       "password": "12345",
-      "registrationNumber": "24951",
+      "registrationNumber": "84873",
       "gender": "FEMALE",
       "image": "C:\\fakepath\\voter2.jpg",
+      "hasVoted": "YES",
+      "id": 2
+    },
+    {
+      "firstName": "MUHAMADU",
+      "lastName": "ADAMU",
+      "age": "35",
+      "password": "12345",
+      "registrationNumber": "18545",
+      "gender": "MALE",
+      "image": "C:\\fakepath\\buhari.jpeg",
+      "hasVoted": "NO",
+      "id": 3
+    }
+  ],
+  "temp": [
+    {
+      "firstName": "MUHAMADU",
+      "lastName": "ADAMU",
+      "age": "35",
+      "password": "12345",
+      "registrationNumber": "18545",
+      "gender": "MALE",
+      "image": "C:\\fakepath\\buhari.jpeg",
       "hasVoted": "NO",
       "id": "1",
-      "identity": "2"
+      "identity": "3"
     }
   ],
   "temp2": [
@@ -97,9 +108,9 @@
   ],
   "deadline": [
     {
-      "date": "2019-10-26",
-      "time": "12:00",
-      "reached": "NO",
+      "date": "2019-11-04",
+      "time": "09:25",
+      "reached": "YES",
       "id": 1
     }
   ]
